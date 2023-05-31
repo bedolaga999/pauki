@@ -1,0 +1,64 @@
+
+#include <iostream>
+#include <cmath>
+ 
+using namespace std;
+ 
+void solveQuadraticEquationByDiscriminant(double a, double b, double c) {
+   double discriminant = b * b - 4 * a * c;
+   setlocale(LC_ALL, "Russian");
+   if (discriminant > 0) {
+       double root1 = (-b + sqrt(discriminant)) / (2 * a);
+       double root2 = (-b - sqrt(discriminant)) / (2 * a);
+ 
+       cout << "Уравнение имеет два корня: " << root1 << " и " << root2 << endl;
+   }
+   else if (discriminant == 0) {
+       double root = -b / (2 * a);
+       setlocale(LC_ALL, "Russian");
+       cout << "Уравнение имеет один корень: " << root << endl;
+   }
+   else {
+       cout << "Уравнение не имеет действительных корней" << endl;
+   }
+}
+ 
+void solveQuadraticEquationByVieta(double a, double b, double c) {
+   double root1 = (-b + sqrt(b * b - 4 * a * c)) / (2 * a);
+   double root2 = (-b - sqrt(b * b - 4 * a * c)) / (2 * a);
+   setlocale(LC_ALL, "Russian");
+   cout << "Уравнение имеет два корня: " << root1 << " и " << root2 << endl;
+}
+ 
+int main() {
+   int method;
+   double a, b, c;
+   setlocale(LC_ALL, "Russian");
+   cout << "Выберите метод решения квадратного уравнения:" << endl;
+   cout << "1. Метод дискриминанта" << endl;
+   cout << "2. Метод теоремы Виетта" << endl;
+   cout << "Ваш выбор: ";
+   cin >> method;
+ 
+   cout << "Введите коэффициенты квадратного уравнения (ax^2 + bx + c = 0):" << endl;
+   cout << "a: ";
+   cin >> a;
+   cout << "b: ";
+   cin >> b;
+   cout << "c: ";
+   cin >> c;
+ 
+   cout << "Решение квадратного уравнения:" << endl;
+ 
+   if (method == 1) {
+       solveQuadraticEquationByDiscriminant(a, b, c);
+   }
+   else if (method == 2) {
+       solveQuadraticEquationByVieta(a, b, c);
+   }
+   else {
+       cout << "Некорректный выбор метода" << endl;
+   }
+ 
+   return 0;
+}
