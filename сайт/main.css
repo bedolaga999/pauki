@@ -1,0 +1,356 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+header h1 {
+    font-family: Times, serif;
+    font-size: 60px;
+    list-style: none;
+    text-decoration: none;
+    color:#000000;
+    
+}
+
+header h2 {
+    font-family: Palatino, URW Palladio L, serif;
+    font-style: oblique;
+    color: #999494;
+    line-height: 0;
+}
+header h3 {
+    margin-top: 0.5em;
+    margin-block-start: 3em;
+    font-style: italic;
+    color: #bbb;
+    text-align: center;
+}
+
+/* Остальные стили остаются без изменений */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ... (остальные стили) */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.item {
+    text-align: center;
+}
+
+.item img {
+    max-width: 50%;
+    height: auto;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.first4{
+    color:black;
+    background-color: white;
+    height: calc(var(--height-size)*0.75);
+    width: calc(var(--width-size)*0.7);
+    border-radius: 10px;
+    padding: 10px;
+    transition: 1s;
+    margin-top: 20px;
+    border: solid black calc(var(--font-size)*0.17);
+    text-align: center;
+}
+.name-product{
+    text-align: center;
+    font-weight: 400;
+    font-size: calc(var(--font-size)*0.6);
+    height: calc(var(--width-size)*0.15);
+    margin-top: 5px;
+    margin-bottom: calc(var(--width-size)*0.07);
+    font-family: 'Courier New, monospace', serif;
+}
+.price-product{
+    text-align: center;
+    font-weight: 400;
+    font-size: calc(var(--font-size)*0.6);
+    height: calc(var(--width-size)*0.15);
+    margin-top: 5px;
+    margin-bottom: calc(var(--width-size)*0.07);
+    font-family: 'Courier New, monospace', serif;
+    list-style: none;
+    text-decoration: none;
+    color:#000000
+}  
+.but{
+    background: transparent;
+    border: none !important;
+    text-align: center;
+    height: 25px;
+    border-radius: 10px;
+    
+}
+.parkur{
+    color:black;
+    background-color: white;
+    height: calc(var(--height-size)*0.75);
+    width: calc(var(--width-size)*0.7);
+    border-radius: 10px;
+    padding: 10px;
+    transition: 1s;
+    margin-top: 90px;
+    border: solid black calc(var(--font-size)*0.17);
+    text-align: center; 
+}
+
+.product-icon {
+    transition: 1s; /* Время эффекта */
+}
+.product-icon:hover {
+    transform: scale(1.1); /* Увеличиваем масштаб */
+ }
+.row{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    height: 600px;
+}
+.column{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.slider {
+    width: 500px;
+    height: 300px;
+    position: relative;
+  }
+  
+  .slider-img {
+    width: 100%;
+    position: ;
+    top: 0%;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .slider-img.active {
+    opacity: 1;
+  }
+  
+  .slider img {
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  
+  .slider .prev {
+    left: 10px;
+  }
+  
+  .slider .next {
+    right: 10px;
+  } 
+.header{
+    position: fixed;
+    color:#000000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 30px 15px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.header__backgorund {
+  position: absolute;
+  height: inherit;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(100%);
+  filter: grayscale(10%);
+}
+
+.header__backgorund-wrapper {
+  position: absolute;
+  height: inherit;
+  width: 100%;
+
+  background: rgb((190, 194, 190), rgb(190, 194, 190), rgb(255, 255, 255));
+  z-index: 1;
+}
+
+.header-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  height: 80px;
+  color: white;
+  background: var(--background-black-opacity);
+  z-index: 2;
+}
+
+.header-top a {
+  color:  #262626;
+}
+
+.header-top a.active {
+  color: var(--color-white);
+
+}
+
+.logo {
+  font-size: 30px;
+  
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-element {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.menu-element:last-child {
+  margin-right: 0px;
+}
+
+.switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 35px;
+  padding: 0 10px;
+  width: 90px;
+
+  background: var(--background-black-opacity);
+  border-radius: 20px;
+  opacity: .9;
+
+  transition: opacity .25s ease; 
+  cursor: pointer;
+
+}
+.switcher:hover {
+  opacity: 1;
+}
+
+.switcher:before {
+  content: "";
+  width: 40px;
+  height: 30px;
+  background: #8a8585;
+  position: absolute;
+  left: 42px;
+  z-index: 1;
+  border-radius: 20px;
+  transition: left .25s ease-in-out; 
+
+
+
+}
+
+#lang:checked + .switcher:before {
+  left: 7px;
+}
+
+#lang:checked + .switcher span:first-child {
+  color: var(--background-black-opacity);
+}
+
+#lang:checked + .switcher span:last-child {
+  color: var(--color-white);
+}
+
+
+.switcher span {
+  flex: 1 1 50%;
+  text-align: center;
+  z-index: 2;
+  color: var(--background-black-opacity);
+}
+
+#lang {
+  display: none;
+}
+
+
+.header-center {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 80px);
+
+  color: #262626;
+  z-index: 2;
+  
+}
+
+.header-center__wrapper {
+  width: 100%;
+  background: var(--background-black-opacity);
+  text-align: center;
+  padding: 10px 0 20px 5px;
+  
+}
+
+.name {
+  font-size: 58px;
+  line-height: 74px;
+}
